@@ -1,0 +1,12 @@
+#IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+#Maven
+log/
+target/
+
+#compilation artifacts
+out/
