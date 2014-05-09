@@ -1,4 +1,4 @@
-define (require), ->
+define (require) ->
   context =
     router: require 'plugins/router'
 

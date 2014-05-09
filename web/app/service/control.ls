@@ -1,2 +1,2 @@
-define (require), ->
+define (require) ->
   context = []
