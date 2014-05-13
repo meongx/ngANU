@@ -1,8 +1,10 @@
 #page-container
   nav#page-leftbar
-    ul#sidebar.acc-menu
-      li
-        a href="#"
-          i.fa.fa-home
-          span Server Control
+    ul#sidebar.acc-menu data-bind="foreach: router.navigationModel"
+      li data-bind="css: { active: isActive }"
+        a
+          i class="fa fa-{{icon}}"
+          span
+            | {{ title }}
+
   #page-content data-bind="router: { cacheView: true } "

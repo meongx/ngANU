@@ -1,0 +1,8 @@
+body, html, #app-host, #page-container, #page-content {
+  height: 100%; }
+
+body {
+  padding-top: 0; }
+
+#page-content {
+  padding-left: 10px; }

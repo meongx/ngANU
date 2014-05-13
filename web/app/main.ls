@@ -1,4 +1,4 @@
-window._D = -> console.log.apply console, &
+window.l = -> console.log.apply console, &
 
 requirejs.config do
   paths:
@@ -7,7 +7,7 @@ requirejs.config do
     'plugins' : '../lib/durandal/js/plugins'
     'transitions' : '../lib/durandal/js/transitions'
     'knockout': '../lib/knockout/knockout-3.1.0'
-
+    'knockout-punches': '../lib/knockout/knockout.punches.min'
     'bootstrap': '../lib/avant/js/bootstrap.min'
     'jquery': '../lib/avant/js/jquery-1.10.2.min'
 
@@ -24,6 +24,11 @@ define (require) ->
 
   system.debug true
 
+  ko = require 'knockout'
+  require 'knockout-punches'
+  ko.punches.interpolationMarkup.enable!
+  ko.punches.attributeInterpolationMarkup.enable!
+
   app.title = 'ngANU'
 
   app.configurePlugins {
@@ -35,4 +40,4 @@ define (require) ->
 
   app.start().then ->
     viewLocator.useConvention!
-    app.setRoot 'shell', 'entrance', 'app-host'
+    app.setRoot 'shell', void, 'app-host'

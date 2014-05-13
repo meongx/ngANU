@@ -7,7 +7,8 @@
       activate: function(){
         context.router.map({
           route: '',
-          title: 'Server Status',
+          title: 'Server Control',
+          icon: 'cogs',
           moduleId: 'service/control',
           nav: true
         }, {
@@ -16,7 +17,7 @@
           moduleId: 'test/meong',
           nav: true
         });
-        return context.router.activate();
+        return context.router.buildNavigationModel().activate();
       }
     };
   });

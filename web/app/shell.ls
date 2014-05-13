@@ -5,7 +5,8 @@ define (require) ->
     activate: ->
       context.router.map do
         * route: ''
-          title: 'Server Status'
+          title: 'Server Control'
+          icon: 'cogs'
           moduleId: 'service/control'
           nav: true
 
@@ -14,4 +15,4 @@ define (require) ->
           moduleId: 'test/meong'
           nav: true
 
-      context.router.activate!
+      context.router.buildNavigationModel!.activate!
